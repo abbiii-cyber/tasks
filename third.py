@@ -1,17 +1,23 @@
 
-def Subsequence (arrayA, arrayB):
-    {
-    int startIndexB = 0:
-        foreach (int n in arrayA) 
-        {
-            int next = indexOf(arrayB, startIndexB , n);
-            if (next == NOT_FOUND)
-            {
-                return false;
-            }
-            startIndexB = next+1;
-        }
-        return true:
-    }
+def Subsequence (arrayA, arrayB, x, y):
+    i = 0; j = 0;
+    while(i<x and j<y):
+        if(arrayA[i] == arrayB[j]):
+            i += 1;
+            j+= 1;
+            if (j==y):
+                return True
+            else:
+                    i=i-j+1;
+                    j=0;
+        return False
 
 
+arrayA = [1, 2, 3, 8, 9, -1, 0]
+arrayB = [2, 8, 9, 10]
+x = len(arrayA);
+y = len(arrayB);
+if (Subsequence(arrayA, arrayB, x, y)):
+    print("True")
+else:
+    print("False")
