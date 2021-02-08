@@ -1,4 +1,4 @@
-
+#function to check if an array is a subsequence of a given array where i is the index of first array x is its length and j and y for second array
 def Subsequence (arrayA, arrayB, x, y):
     i = 0; j = 0;
     while(i<x and j<y):

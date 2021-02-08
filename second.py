@@ -1,3 +1,5 @@
+#function to display all 3 numbers in an array that add up to a given number
+# where i is the index, j is next index and n is the total index
 def Numbers(list, n, sum):
     for i in range(0, n-2):
         for j in range(i+1, n-1):
